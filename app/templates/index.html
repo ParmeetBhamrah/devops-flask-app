@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Flask App</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f0f4f8;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 48px 64px;
+            text-align: center;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        .badge {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+        h1 { margin: 0 0 8px; color: #1a1a2e; font-size: 28px; }
+        p  { color: #666; margin: 0 0 32px; }
+        .counter {
+            font-size: 64px;
+            font-weight: 700;
+            color: #4f46e5;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .counter-label { color: #888; font-size: 14px; margin-bottom: 32px; }
+        .links a {
+            display: inline-block;
+            margin: 0 8px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .btn-primary { background: #4f46e5; color: white; }
+        .btn-secondary { background: #f0f4f8; color: #444; }
+        .stack {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid #f0f0f0;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="badge">Running in Docker</div>
+        <h1>DevOps Flask App</h1>
+        <p>A production-like pipeline with Docker, Nginx, Redis &amp; GitHub Actions</p>
+
+        <div class="counter">{{ visits }}</div>
+        <div class="counter-label">total page visits (stored in Redis)</div>
+
+        <div class="links">
+            <a href="/health" class="btn-primary">Health Check</a>
+            <a href="/reset" class="btn-secondary">Reset Counter</a>
+        </div>
+
+        <div class="stack">
+            Stack: Python · Flask · Redis · Nginx · Docker · GitHub Actions
+        </div>
+    </div>
+</body>
+</html>
