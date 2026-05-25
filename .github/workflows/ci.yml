@@ -58,8 +58,8 @@ jobs:
           tags: |
             devops-flask-app:latest
             devops-flask-app:${{ github.sha }}
-          cache-from: type=gbd,scope=main
-          cache-to: type=gbd,scope=main,mode=max
+          cache-from: type=gha,scope=main
+          cache-to: type=gha,scope=main,mode=max
 
       - name: Verify image built
         run: |
